@@ -13,8 +13,6 @@ import numpy as np
 import tensorflow_addons as tfa
 
 import json
-import numpy as np
-import pandas as pd
 from functools import reduce
 
 ## import embedding results
