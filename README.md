@@ -10,5 +10,5 @@
 # Datasets
   In this project, we used detailed and comprehensive patients’ data from MIMIC-III dataset which contains 26 tables and medical records for 41000+ critical care patients. MIMIC-III (Medical Information Mart for Intensive Care III) is a large, freely-available database comprising de identified health-related data associated with over forty thousand patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012.It includes demographics, vital signs, laboratory tests, medications, and more. Details are available on the MIMIC website: https://mimic.physionet.org/
 
-# Contract
+# Contact
 If you have any question please contact Chengming Xie cx2234@columbia.edu or Hongshan Lin hl3353@columbia.edu
