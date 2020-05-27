@@ -224,10 +224,25 @@ vae.compile(optimizer='adam', loss=[zero_loss], metrics=[kl_loss])
 
 vae.summary()
 
+def create_model_checkpoint(dir, model_name):
+    filepath = dir + '/' + model_name + ".h5" 
+    directory = os.path.dirname(filepath)
+    try:
+        os.stat(directory)
+    except:
+        os.mkdir(directory)
+    checkpointer = ModelCheckpoint(filepath=filepath, verbose=1, save_best_only=True)
+    return checkpointer
+
+checkpointer = create_model_checkpoint('models', 'lstm_vae')
+
+
+
 vae.fit(data_train, data_train,
      shuffle=True,
      epochs=100,
-     batch_size=batch_size)
+     batch_size=batch_size,
+     validation_data=(data_val, data_val), callbacks=[checkpointer])
 
 
 # build a model to project sentences on the latent space
